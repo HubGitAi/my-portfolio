@@ -1,8 +1,0 @@
-{
-  "name": "static-site",
-  "version": "1.0.0",
-  "description": "A static website",
-  "scripts": {
-    "build": "echo 'No build step needed'"
-  }
-}
