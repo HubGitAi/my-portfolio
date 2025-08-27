@@ -1076,6 +1076,251 @@ padding: 1.5rem;
     }
 }
 
+/* ===== macOS STYLE BUTTONS ===== */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap');
+
+/* Base macOS Button Style */
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-width: 100px;
+    border-radius: 6px;
+    background: linear-gradient(to bottom, #ffffff 0%, #f5f5f7 100%);
+    color: #000000;
+    border: 1px solid #d1d1d6;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05),
+                0px 0.5px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover State */
+.btn:hover {
+    background: linear-gradient(to bottom, #f9f9fa 0%, #ececef 100%);
+    border-color: #b9b9be;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08),
+                0px 1px 2px rgba(0, 0, 0, 0.08);
+    transform: translateY(-0.5px);
+}
+
+/* Active State */
+.btn:active {
+    background: linear-gradient(to bottom, #ececef 0%, #e0e0e5 100%);
+    border-color: #a1a1a6;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1) inset;
+    transform: translateY(0.5px);
+}
+
+/* Focus State */
+.btn:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px rgba(0, 125, 250, 0.4),
+                0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== macOS BUTTON COLORS ===== */
+
+/* Blue macOS Button (Primary) */
+.btn-primary {
+    background: linear-gradient(to bottom, #007AFF 0%, #0066CC 100%);
+    border: 1px solid #0066CC;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
+                0px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to bottom, #0088FF 0%, #0072E0 100%);
+    border-color: #0072E0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
+                0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+    background: linear-gradient(to bottom, #0066CC 0%, #0055B3 100%);
+    border-color: #0055B3;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Green macOS Button */
+.btn-green {
+    background: linear-gradient(to bottom, #34C759 0%, #2CA44F 100%);
+    border: 1px solid #2CA44F;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
+                0px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-green:hover {
+    background: linear-gradient(to bottom, #3CD467 0%, #32B459 100%);
+    border-color: #32B459;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
+                0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-green:active {
+    background: linear-gradient(to bottom, #2CA44F 0%, #259343 100%);
+    border-color: #259343;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Orange macOS Button */
+.btn-orange {
+    background: linear-gradient(to bottom, #FF9500 0%, #E68500 100%);
+    border: 1px solid #E68500;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
+                0px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-orange:hover {
+    background: linear-gradient(to bottom, #FFA333 0%, #F59400 100%);
+    border-color: #F59400;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
+                0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-orange:active {
+    background: linear-gradient(to bottom, #E68500 0%, #CC7600 100%);
+    border-color: #CC7600;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Red macOS Button */
+.btn-red {
+    background: linear-gradient(to bottom, #FF3B30 0%, #E63329 100%);
+    border: 1px solid #E63329;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
+                0px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-red:hover {
+    background: linear-gradient(to bottom, #FF5249 0%, #F54238 100%);
+    border-color: #F54238;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
+                0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-red:active {
+    background: linear-gradient(to bottom, #E63329 0%, #CC2C23 100%);
+    border-color: #CC2C23;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Purple macOS Button */
+.btn-purple {
+    background: linear-gradient(to bottom, #AF52DE 0%, #9B46C7 100%);
+    border: 1px solid #9B46C7;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
+                0px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-purple:hover {
+    background: linear-gradient(to bottom, #B966E3 0%, #A556D1 100%);
+    border-color: #A556D1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
+                0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-purple:active {
+    background: linear-gradient(to bottom, #9B46C7 0%, #883BB0 100%);
+    border-color: #883BB0;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Gray macOS Button (Secondary) */
+.btn-gray {
+    background: linear-gradient(to bottom, #8E8E93 0%, #7A7A7F 100%);
+    border: 1px solid #7A7A7F;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
+                0px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-gray:hover {
+    background: linear-gradient(to bottom, #9A9A9F 0%, #86868B 100%);
+    border-color: #86868B;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
+                0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-gray:active {
+    background: linear-gradient(to bottom, #7A7A7F 0%, #66666B 100%);
+    border-color: #66666B;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Glass macOS Button */
+.btn-glass {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(245, 245, 247, 0.7) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    color: #000000;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+                0px 0.5px 1.5px rgba(0, 0, 0, 0.05);
+}
+
+.btn-glass:hover {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(250, 250, 252, 0.8) 100%);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
+                0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-glass:active {
+    background: linear-gradient(to bottom, rgba(240, 240, 242, 0.8) 0%, rgba(230, 230, 232, 0.7) 100%);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.15) inset;
+}
+
+/* Button Groups */
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 24px 0;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        padding: 7px 16px;
+        font-size: 12px;
+        min-width: 90px;
+        border-radius: 5px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .button-group .btn {
+        width: 200px;
+    }
+}
+
+/* macOS Style Focus Ring */
+*:focus {
+    outline: none;
+}
+
+.btn:focus-visible {
+    box-shadow: 0px 0px 0px 3px rgba(0, 125, 250, 0.4),
+                0px 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
 /* Footer */
 footer {
 background: #2c3e50;
