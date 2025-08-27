@@ -348,6 +348,14 @@ nav a:hover {
     opacity: 0.8;
 }
 
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
 /* ===== ALL 3D BUTTON STYLES ===== */
 
 /* Base Button Style */
