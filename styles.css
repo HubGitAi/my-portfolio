@@ -577,6 +577,292 @@ nav a:hover {
     }
 }
 
+/* ===== WINDOWS XP 3D BUTTONS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
+
+/* Base Windows XP Button Style */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s ease;
+    min-width: 120px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Windows XP Classic 3D Effect */
+.btn {
+    /* Light source from top-left */
+    border-top-color: #dfdfdf;
+    border-left-color: #dfdfdf;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    background: linear-gradient(to bottom, #f1f1f1 0%, #e5e5e5 100%);
+    color: #000000;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+}
+
+/* Hover State - Pressed look */
+.btn:hover {
+    border-top-color: #808080;
+    border-left-color: #808080;
+    border-right-color: #dfdfdf;
+    border-bottom-color: #dfdfdf;
+    background: linear-gradient(to bottom, #e5e5e5 0%, #d9d9d9 100%);
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
+}
+
+/* Active State - Fully pressed */
+.btn:active {
+    border-top-color: #808080;
+    border-left-color: #808080;
+    border-right-color: #dfdfdf;
+    border-bottom-color: #dfdfdf;
+    background: linear-gradient(to bottom, #d9d9d9 0%, #cccccc 100%);
+    transform: translate(2px, 2px);
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+/* ===== DIFFERENT XP BUTTON COLORS ===== */
+
+/* Blue XP Button (Default) */
+.btn-primary {
+    background: linear-gradient(to bottom, #7b9aed 0%, #5a78cd 100%);
+    border-top-color: #b5c8f5;
+    border-left-color: #b5c8f5;
+    border-right-color: #3a56a5;
+    border-bottom-color: #3a56a5;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to bottom, #6a89dc 0%, #4967bb 100%);
+    border-top-color: #3a56a5;
+    border-left-color: #3a56a5;
+    border-right-color: #b5c8f5;
+    border-bottom-color: #b5c8f5;
+}
+
+.btn-primary:active {
+    background: linear-gradient(to bottom, #4967bb 0%, #385599 100%);
+}
+
+/* Green XP Button */
+.btn-green {
+    background: linear-gradient(to bottom, #8cc474 0%, #6ba352 100%);
+    border-top-color: #c4e8b5;
+    border-left-color: #c4e8b5;
+    border-right-color: #4a7d32;
+    border-bottom-color: #4a7d32;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+}
+
+.btn-green:hover {
+    background: linear-gradient(to bottom, #7bb363 0%, #5a9241 100%);
+    border-top-color: #4a7d32;
+    border-left-color: #4a7d32;
+    border-right-color: #c4e8b5;
+    border-bottom-color: #c4e8b5;
+}
+
+.btn-green:active {
+    background: linear-gradient(to bottom, #5a9241 0%, #497d30 100%);
+}
+
+/* Orange XP Button */
+.btn-orange {
+    background: linear-gradient(to bottom, #f6b069 0%, #e5913c 100%);
+    border-top-color: #fad6b5;
+    border-left-color: #fad6b5;
+    border-right-color: #b37126;
+    border-bottom-color: #b37126;
+    color: #000000;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+}
+
+.btn-orange:hover {
+    background: linear-gradient(to bottom, #e59f58 0%, #d4802b 100%);
+    border-top-color: #b37126;
+    border-left-color: #b37126;
+    border-right-color: #fad6b5;
+    border-bottom-color: #fad6b5;
+}
+
+.btn-orange:active {
+    background: linear-gradient(to bottom, #d4802b 0%, #c3711a 100%);
+}
+
+/* Red XP Button */
+.btn-red {
+    background: linear-gradient(to bottom, #f28b82 0%, #d9655a 100%);
+    border-top-color: #f9c9c5;
+    border-left-color: #f9c9c5;
+    border-right-color: #b53c32;
+    border-bottom-color: #b53c32;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+}
+
+.btn-red:hover {
+    background: linear-gradient(to bottom, #e17a70 0%, #c85449 100%);
+    border-top-color: #b53c32;
+    border-left-color: #b53c32;
+    border-right-color: #f9c9c5;
+    border-bottom-color: #f9c9c5;
+}
+
+.btn-red:active {
+    background: linear-gradient(to bottom, #c85449 0%, #b74338 100%);
+}
+
+/* Purple XP Button */
+.btn-purple {
+    background: linear-gradient(to bottom, #b8a1e0 0%, #9780c2 100%);
+    border-top-color: #dcd1f5;
+    border-left-color: #dcd1f5;
+    border-right-color: #6b5994;
+    border-bottom-color: #6b5994;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+}
+
+.btn-purple:hover {
+    background: linear-gradient(to bottom, #a790d0 0%, #866fb2 100%);
+    border-top-color: #6b5994;
+    border-left-color: #6b5994;
+    border-right-color: #dcd1f5;
+    border-bottom-color: #dcd1f5;
+}
+
+.btn-purple:active {
+    background: linear-gradient(to bottom, #866fb2 0%, #755ea1 100%);
+}
+
+/* Glass XP Button (Special) */
+.btn-glass {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.8) 100%);
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #c0c0c0;
+    border-bottom-color: #c0c0c0;
+    color: #000000;
+    backdrop-filter: blur(5px);
+}
+
+.btn-glass:hover {
+    background: linear-gradient(to bottom, rgba(240,240,240,0.9) 0%, rgba(225,225,225,0.8) 100%);
+    border-top-color: #c0c0c0;
+    border-left-color: #c0c0c0;
+    border-right-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+.btn-glass:active {
+    background: linear-gradient(to bottom, rgba(225,225,225,0.9) 0%, rgba(210,210,210,0.8) 100%);
+}
+
+/* ===== BUTTON SHOWCASE SECTION ===== */
+.button-showcase {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #008080 0%, #004040 100%);
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+}
+
+.button-showcase h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.button-showcase p {
+    font-size: 13px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.button-item {
+    background: linear-gradient(to bottom, #d4d0c8 0%, #c0bcb4 100%);
+    padding: 20px;
+    border: 2px solid;
+    border-top-color: #f0f0f0;
+    border-left-color: #f0f0f0;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.button-item h3 {
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.button-item p {
+    margin: 15px 0 0;
+    font-size: 11px;
+    color: #404040;
+}
+
+/* Button Groups */
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+        min-width: 100px;
+    }
+    
+    .button-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .button-item {
+        padding: 15px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .button-group .btn {
+        width: 200px;
+    }
+}
+
 /* Footer */
 footer {
     background: #2c3e50;
