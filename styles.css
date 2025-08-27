@@ -1,95 +1,343 @@
-/* ===== FULL-SCREEN HERO SECTION ===== */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%232c3e50" width="1200" height="800"/></svg>');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
+/* ===== FULL-SCREEN SLIDES LAYOUT ===== */
+html, body {
+    margin: 0;
     padding: 0;
-    margin-top: 80px; /* Height of fixed header */
-    height: calc(100vh - 80px); /* Full viewport height minus header */
-    min-height: 600px; /* Minimum height for smaller screens */
+    overflow-x: hidden;
+}
+
+/* Each slide takes full viewport */
+.slide {
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
+    position: relative;
 }
 
-.hero .container {
+/* Smooth scrolling */
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Container for slide content */
+.slide-container {
+    max-width: 1200px;
     padding: 2rem;
-    max-width: 800px;
+    text-align: center;
 }
 
-.hero h1 {
+/* ===== INDIVIDUAL SLIDE STYLES ===== */
+
+/* Slide 1: About Our Company */
+.slide-about {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.slide-about h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
-    line-height: 1.2;
 }
 
-.hero p {
+.slide-about p {
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
     opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Slide 2: View Projects */
+.slide-projects {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+}
+
+/* Slide 3: Our Services */
+.slide-services {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+}
+
+/* Slide 4: Get Free Consultation */
+.slide-contact {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: white;
+}
+
+/* Consistent styling for all slides */
+.slide h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.slide p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 1.6;
 }
 
-/* Button group adjustments for hero */
-.hero .button-group {
-    margin: 3rem 0 1rem;
+/* Navigation Dots */
+.navigation-dots {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 
-/* Responsive design for hero */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
+.dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 15px 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.dot.active {
+    background: #fff;
+    border-color: #fff;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+/* Header - Fixed at top */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Button Styles (macOS style) */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(to bottom, #007AFF 0%, #0066CC 100%);
+    color: white;
+    border: 1px solid #0066CC;
+}
+
+.btn-secondary {
+    background: linear-gradient(to bottom, #8E8E93 0%, #7A7A7F 100%);
+    color: white;
+    border: 1px solid #7A7A7F;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 500px;
+    margin: 3rem auto 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        height: calc(100vh - 70px);
-        min-height: 500px;
-    }
-    
-    .hero h1 {
+    .slide h1 {
         font-size: 2.5rem;
-        margin-bottom: 1rem;
     }
     
-    .hero p {
+    .slide p {
         font-size: 1.1rem;
-        margin-bottom: 2rem;
     }
     
-    .hero .button-group {
-        margin: 2rem 0 1rem;
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        margin: 5px;
+    }
+    
+    .navigation-dots {
+        right: 15px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+        margin: 12px 0;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    .projects-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    .hero {
-        height: calc(100vh - 60px);
-        min-height: 450px;
-    }
-    
-    .hero h1 {
+    .slide h1 {
         font-size: 2rem;
     }
     
-    .hero p {
+    .slide p {
         font-size: 1rem;
     }
     
-    .hero .container {
-        padding: 1.5rem;
+    .btn {
+        display: block;
+        margin: 10px auto;
+        width: 200px;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
-/* Smooth scroll indicator (optional) */
+/* Scroll indicator animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -98,699 +346,4 @@
     color: white;
     opacity: 0.7;
     animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-/* ===== macOS STYLE BUTTONS ===== */
-@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap');
-
-/* Base macOS Button Style */
-.btn {
-    display: inline-block;
-    padding: 8px 20px;
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    min-width: 100px;
-    border-radius: 6px;
-    background: linear-gradient(to bottom, #ffffff 0%, #f5f5f7 100%);
-    color: #000000;
-    border: 1px solid #d1d1d6;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05),
-                0px 0.5px 1px rgba(0, 0, 0, 0.05);
-}
-
-/* Hover State */
-.btn:hover {
-    background: linear-gradient(to bottom, #f9f9fa 0%, #ececef 100%);
-    border-color: #b9b9be;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08),
-                0px 1px 2px rgba(0, 0, 0, 0.08);
-    transform: translateY(-0.5px);
-}
-
-/* Active State */
-.btn:active {
-    background: linear-gradient(to bottom, #ececef 0%, #e0e0e5 100%);
-    border-color: #a1a1a6;
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1) inset;
-    transform: translateY(0.5px);
-}
-
-/* Focus State */
-.btn:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px 3px rgba(0, 125, 250, 0.4),
-                0px 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-/* ===== macOS BUTTON COLORS ===== */
-
-/* Blue macOS Button (Primary) */
-.btn-primary {
-    background: linear-gradient(to bottom, #007AFF 0%, #0066CC 100%);
-    border: 1px solid #0066CC;
-    color: #ffffff;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
-                0px 0.5px 1px rgba(0, 0, 0, 0.1);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(to bottom, #0088FF 0%, #0072E0 100%);
-    border-color: #0072E0;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
-                0px 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.btn-primary:active {
-    background: linear-gradient(to bottom, #0066CC 0%, #0055B3 100%);
-    border-color: #0055B3;
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
-}
-
-/* Green macOS Button */
-.btn-green {
-    background: linear-gradient(to bottom, #34C759 0%, #2CA44F 100%);
-    border: 1px solid #2CA44F;
-    color: #ffffff;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
-                0px 0.5px 1px rgba(0, 0, 0, 0.1);
-}
-
-.btn-green:hover {
-    background: linear-gradient(to bottom, #3CD467 0%, #32B459 100%);
-    border-color: #32B459;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
-                0px 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.btn-green:active {
-    background: linear-gradient(to bottom, #2CA44F 0%, #259343 100%);
-    border-color: #259343;
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
-}
-
-/* Orange macOS Button */
-.btn-orange {
-    background: linear-gradient(to bottom, #FF9500 0%, #E68500 100%);
-    border: 1px solid #E68500;
-    color: #ffffff;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
-                0px 0.5px 1px rgba(0, 0, 0, 0.1);
-}
-
-.btn-orange:hover {
-    background: linear-gradient(to bottom, #FFA333 0%, #F59400 100%);
-    border-color: #F59400;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
-                0px 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.btn-orange:active {
-    background: linear-gradient(to bottom, #E68500 0%, #CC7600 100%);
-    border-color: #CC7600;
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
-}
-
-/* Red macOS Button */
-.btn-red {
-    background: linear-gradient(to bottom, #FF3B30 0%, #E63329 100%);
-    border: 1px solid #E63329;
-    color: #ffffff;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
-                0px 0.5px 1px rgba(0, 0, 0, 0.1);
-}
-
-.btn-red:hover {
-    background: linear-gradient(to bottom, #FF5249 0%, #F54238 100%);
-    border-color: #F54238;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
-                0px 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.btn-red:active {
-    background: linear-gradient(to bottom, #E63329 0%, #CC2C23 100%);
-    border-color: #CC2C23;
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
-}
-
-/* Purple macOS Button */
-.btn-purple {
-    background: linear-gradient(to bottom, #AF52DE 0%, #9B46C7 100%);
-    border: 1px solid #9B46C7;
-    color: #ffffff;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
-                0px 0.5px 1px rgba(0, 0, 0, 0.1);
-}
-
-.btn-purple:hover {
-    background: linear-gradient(to bottom, #B966E3 0%, #A556D1 100%);
-    border-color: #A556D1;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
-                0px 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.btn-purple:active {
-    background: linear-gradient(to bottom, #9B46C7 0%, #883BB0 100%);
-    border-color: #883BB0;
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
-}
-
-/* Gray macOS Button (Secondary) */
-.btn-gray {
-    background: linear-gradient(to bottom, #8E8E93 0%, #7A7A7F 100%);
-    border: 1px solid #7A7A7F;
-    color: #ffffff;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1),
-                0px 0.5px 1px rgba(0, 0, 0, 0.1);
-}
-
-.btn-gray:hover {
-    background: linear-gradient(to bottom, #9A9A9F 0%, #86868B 100%);
-    border-color: #86868B;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
-                0px 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.btn-gray:active {
-    background: linear-gradient(to bottom, #7A7A7F 0%, #66666B 100%);
-    border-color: #66666B;
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.2) inset;
-}
-
-/* Glass macOS Button */
-.btn-glass {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(245, 245, 247, 0.7) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    color: #000000;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-                0px 0.5px 1.5px rgba(0, 0, 0, 0.05);
-}
-
-.btn-glass:hover {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(250, 250, 252, 0.8) 100%);
-    border-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15),
-                0px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.btn-glass:active {
-    background: linear-gradient(to bottom, rgba(240, 240, 242, 0.8) 0%, rgba(230, 230, 232, 0.7) 100%);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.15) inset;
-}
-
-/* Button Groups */
-.button-group {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin: 24px 0;
-    flex-wrap: wrap;
-}
-
-/* ===== CONSISTENT SECTION BACKGROUNDS ===== */
-.services, .projects, .contact {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    color: #ffffff;
-    scroll-margin-top: 100px;
-}
-
-.services h2, .projects h2, .contact h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-/* Services Section Specific Styles */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.service-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 2.5rem;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-}
-
-.service-card i {
-    font-size: 3rem;
-    color: #3498db;
-    margin-bottom: 1.5rem;
-}
-
-.service-card h3 {
-    color: #ffffff;
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.service-card p {
-    color: #ecf0f1;
-    line-height: 1.6;
-    opacity: 0.9;
-}
-
-/* Projects Section Specific Styles */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-}
-
-.project-image {
-    height: 200px;
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3rem;
-}
-
-.project-card h3 {
-    padding: 1.5rem 1.5rem 0.5rem;
-    color: #ffffff;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.project-card p {
-    padding: 0 1.5rem 1.5rem;
-    color: #ecf0f1;
-    opacity: 0.9;
-}
-
-/* Contact Section Styles */
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.contact-info h3 {
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.contact-info p {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #ecf0f1;
-}
-
-.contact-form {
-    display: grid;
-    gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    backdrop-filter: blur(10px);
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #bdc3c7;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
-}
-
-/* About Section Styles */
-.about {
-    padding: 100px 0;
-    background: #f8f9fa;
-    scroll-margin-top: 100px;
-}
-
-.about h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #2c3e50;
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-text h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.about-text p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    color: #7f8c8d;
-}
-
-.about-text ul {
-    list-style: none;
-}
-
-.about-text li {
-    margin-bottom: 0.5rem;
-    color: #27ae60;
-    font-weight: 500;
-}
-
-.about-stats {
-    display: grid;
-    gap: 2rem;
-}
-
-.stat {
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #3498db;
-}
-
-.label {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-}
-
-/* Header Styles */
-header {
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    height: 80px;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 20px;
-    height: 100%;
-}
-
-.logo h2 {
-    color: #2c3e50;
-    font-size: 1.8rem;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #3498db;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%232c3e50" width="1200" height="800"/></svg>');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 180px 20px 120px;
-    margin-top: 80px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-/* ===== SPACING AND SCROLL FIXES ===== */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
-}
-
-section {
-    scroll-margin-top: 100px;
-}
-
-/* Section Spacers */
-.section-spacer {
-    height: 80px;
-    background: linear-gradient(to bottom, 
-        transparent, 
-        rgba(44, 62, 80, 0.1) 50%, 
-        transparent
-    );
-}
-
-/* For the About section spacer */
-#about + .section-spacer {
-    background: linear-gradient(to bottom, 
-        transparent,
-        rgba(248, 249, 250, 0.5) 50%,
-        rgba(44, 62, 80, 0.1) 100%
-    );
-}
-
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Section Title Divider */
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-title h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #3498db;
-    margin: 0 auto;
-    border-radius: 2px;
-}
-
-.about .section-title h2 {
-    color: #2c3e50;
-}
-
-.about .section-title::after {
-    background: #3498db;
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-    .btn {
-        padding: 7px 16px;
-        font-size: 12px;
-        min-width: 90px;
-        border-radius: 5px;
-    }
-    
-    .button-group {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .button-group .btn {
-        width: 220px;
-    }
-    
-    .services-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .service-card,
-    .project-card {
-        padding: 2rem;
-    }
-    
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .services, .projects, .contact, .about {
-        padding: 80px 0;
-    }
-    
-    .services h2, 
-    .projects h2, 
-    .contact h2,
-    .about h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .hero {
-        padding: 150px 20px 80px;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    nav ul {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .section-spacer {
-        height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .button-group .btn {
-        width: 100%;
-        max-width: 280px;
-    }
-    
-    .hero {
-        padding: 120px 20px 60px;
-    }
-    
-    .services, .projects, .contact, .about {
-        padding: 60px 0;
-    }
-    
-    .section-spacer {
-        height: 40px;
-    }
-}
-
-/* macOS Style Focus Ring */
-*:focus {
-    outline: none;
-}
-
-.btn:focus-visible {
-    box-shadow: 0px 0px 0px 3px rgba(0, 125, 250, 0.4),
-                0px 1px 2px rgba(0, 0, 0, 0.05) !important;
 }
