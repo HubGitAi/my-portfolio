@@ -1,3 +1,117 @@
+/* ===== FULL-SCREEN HERO SECTION ===== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%232c3e50" width="1200" height="800"/></svg>');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin-top: 80px; /* Height of fixed header */
+    height: calc(100vh - 80px); /* Full viewport height minus header */
+    min-height: 600px; /* Minimum height for smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .container {
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Button group adjustments for hero */
+.hero .button-group {
+    margin: 3rem 0 1rem;
+}
+
+/* Responsive design for hero */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: calc(100vh - 70px);
+        min-height: 500px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero .button-group {
+        margin: 2rem 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: calc(100vh - 60px);
+        min-height: 450px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero .container {
+        padding: 1.5rem;
+    }
+}
+
+/* Smooth scroll indicator (optional) */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
 /* ===== macOS STYLE BUTTONS ===== */
 @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap');
 
