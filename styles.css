@@ -1,1081 +1,3 @@
-/* Reset and Base Styles */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: 'Arial', sans-serif;
-line-height: 1.6;
-color: #333;
-}
-
-.container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
-}
-
-/* Header Styles */
-header {
-background: #fff;
-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-position: fixed;
-width: 100%;
-top: 0;
-z-index: 1000;
-}
-
-header .container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 20px;
-}
-
-.logo h2 {
-color: #2c3e50;
-font-size: 1.8rem;
-}
-
-nav ul {
-display: flex;
-list-style: none;
-gap: 2rem;
-}
-
-nav a {
-text-decoration: none;
-color: #2c3e50;
-font-weight: 500;
-transition: color 0.3s;
-}
-
-nav a:hover {
-color: #3498db;
-}
-
-/* Hero Section */
-.hero {
-background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%232c3e50" width="1200" height="800"/></svg>');
-background-size: cover;
-background-position: center;
-color: white;
-text-align: center;
-padding: 150px 20px 100px;
-margin-top: 80px;
-}
-
-.hero h1 {
-font-size: 3rem;
-margin-bottom: 1rem;
-}
-
-.hero p {
-font-size: 1.2rem;
-margin-bottom: 2rem;
-opacity: 0.9;
-}
-
-.btn {
-display: inline-block;
-background: #3498db;
-color: white;
-padding: 15px 30px;
-text-decoration: none;
-border-radius: 5px;
-font-weight: bold;
-transition: background 0.3s;
-}
-
-.btn:hover {
-background: #2980b9;
-}
-
-/* Services Section */
-.services {
-padding: 80px 0;
-background: #f8f9fa;
-}
-
-.services h2 {
-text-align: center;
-font-size: 2.5rem;
-margin-bottom: 3rem;
-color: #2c3e50;
-}
-
-.services-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 2rem;
-}
-
-.service-card {
-background: white;
-padding: 2rem;
-border-radius: 10px;
-text-align: center;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-transition: transform 0.3s;
-}
-
-.service-card:hover {
-transform: translateY(-5px);
-}
-
-.service-card i {
-font-size: 3rem;
-color: #3498db;
-margin-bottom: 1rem;
-}
-
-.service-card h3 {
-color: #2c3e50;
-margin-bottom: 1rem;
-}
-
-/* Projects Section */
-.projects {
-padding: 80px 0;
-}
-
-.projects h2 {
-text-align: center;
-font-size: 2.5rem;
-margin-bottom: 3rem;
-color: #2c3e50;
-}
-
-.projects-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 2rem;
-}
-
-.project-card {
-background: white;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.project-image {
-height: 200px;
-background: #ddd;
-}
-
-.project-card h3 {
-padding: 1.5rem 1.5rem 0.5rem;
-color: #2c3e50;
-}
-
-.project-card p {
-padding: 0 1.5rem 1.5rem;
-color: #7f8c8d;
-}
-
-/* About Section */
-.about {
-padding: 80px 0;
-background: #f8f9fa;
-}
-
-.about h2 {
-text-align: center;
-font-size: 2.5rem;
-margin-bottom: 3rem;
-color: #2c3e50;
-}
-
-.about-content {
-display: grid;
-grid-template-columns: 2fr 1fr;
-gap: 3rem;
-align-items: center;
-}
-
-.about-text h3 {
-color: #2c3e50;
-margin-bottom: 1rem;
-font-size: 1.8rem;
-}
-
-.about-text p {
-margin-bottom: 1.5rem;
-line-height: 1.8;
-}
-
-.about-text ul {
-list-style: none;
-}
-
-.about-text li {
-margin-bottom: 0.5rem;
-color: #27ae60;
-}
-
-.about-stats {
-display: grid;
-gap: 2rem;
-}
-
-.stat {
-text-align: center;
-padding: 2rem;
-background: white;
-border-radius: 10px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.number {
-display: block;
-font-size: 2.5rem;
-font-weight: bold;
-color: #3498db;
-}
-
-.label {
-color: #7f8c8d;
-}
-
-/* Contact Section */
-.contact {
-padding: 80px 0;
-}
-
-.contact h2 {
-text-align: center;
-font-size: 2.5rem;
-margin-bottom: 3rem;
-color: #2c3e50;
-}
-
-.contact-content {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 3rem;
-}
-
-.contact-info h3 {
-color: #2c3e50;
-margin-bottom: 1.5rem;
-font-size: 1.8rem;
-}
-
-.contact-info p {
-margin-bottom: 1rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-}
-
-.contact-form {
-display: grid;
-gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-padding: 1rem;
-border: 1px solid #ddd;
-border-radius: 5px;
-font-size: 1rem;
-}
-
-.contact-form button {
-background: #3498db;
-color: white;
-border: none;
-padding: 1rem;
-border-radius: 5px;
-font-size: 1.1rem;
-cursor: pointer;
-transition: background 0.3s;
-}
-
-.contact-form button:hover {
-background: #2980b9;
-}
-
-/* Button Showcase Section */
-.button-showcase {
-padding: 80px 0;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-color: white;
-text-align: center;
-}
-
-.button-showcase h2 {
-font-size: 2.5rem;
-margin-bottom: 1rem;
-color: white;
-}
-
-.button-showcase p {
-font-size: 1.2rem;
-margin-bottom: 3rem;
-opacity: 0.9;
-}
-
-.button-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 2rem;
-max-width: 1200px;
-margin: 0 auto;
-}
-
-.button-item {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
-padding: 2rem;
-border-radius: 15px;
-border: 1px solid rgba(255, 255, 255, 0.2);
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.button-item h3 {
-color: white;
-margin-bottom: 1.5rem;
-font-size: 1.3rem;
-}
-
-.button-item p {
-margin: 1.5rem 0 0;
-font-size: 0.9rem;
-opacity: 0.8;
-}
-
-.button-group {
-display: flex;
-gap: 1rem;
-justify-content: center;
-margin: 2rem 0;
-flex-wrap: wrap;
-}
-
-/* ===== ALL 3D BUTTON STYLES ===== */
-
-/* Base Button Style */
-.btn {
-display: inline-block;
-padding: 18px 35px;
-font-size: 1.1rem;
-font-weight: bold;
-text-decoration: none;
-text-align: center;
-border: none;
-border-radius: 8px;
-cursor: pointer;
-position: relative;
-transition: all 0.3s ease;
-transform-style: preserve-3d;
-perspective: 1000px;
-min-width: 180px;
-}
-
-/* Primary 3D Button (Blue) */
-.btn-primary {
-background: linear-gradient(145deg, #3498db, #2980b9);
-color: white;
-box-shadow: 0 6px 0 #1c5a7e,
-0 8px 20px rgba(52, 152, 219, 0.3);
-}
-
-.btn-primary:hover {
-transform: translateY(2px);
-box-shadow: 0 4px 0 #1c5a7e,
-0 6px 20px rgba(52, 152, 219, 0.4);
-}
-
-.btn-primary:active {
-transform: translateY(6px);
-box-shadow: 0 0px 0 #1c5a7e,
-0 2px 10px rgba(52, 152, 219, 0.3);
-}
-
-.btn-primary::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(145deg, #2980b9, #3498db);
-border-radius: 8px;
-z-index: -1;
-transform: translateZ(-10px);
-transition: all 0.3s ease;
-}
-
-.btn-primary:hover::after {
-transform: translateZ(-8px);
-}
-
-/* Orange 3D Button */
-.btn-orange {
-background: linear-gradient(145deg, #e67e22, #d35400);
-color: white;
-box-shadow: 0 6px 0 #9c4a00,
-0 8px 20px rgba(230, 126, 34, 0.3);
-}
-
-.btn-orange:hover {
-transform: translateY(2px);
-box-shadow: 0 4px 0 #9c4a00,
-0 6px 20px rgba(230, 126, 34, 0.4);
-}
-
-.btn-orange:active {
-transform: translateY(6px);
-box-shadow: 0 0px 0 #9c4a00,
-0 2px 10px rgba(230, 126, 34, 0.3);
-}
-
-.btn-orange::after {
-background: linear-gradient(145deg, #d35400, #e67e22);
-}
-
-/* Green 3D Button */
-.btn-green {
-background: linear-gradient(145deg, #27ae60, #229954);
-color: white;
-box-shadow: 0 6px 0 #1a6e3f,
-0 8px 20px rgba(39, 174, 96, 0.3);
-}
-
-.btn-green:hover {
-transform: translateY(2px);
-box-shadow: 0 4px 0 #1a6e3f,
-0 6px 20px rgba(39, 174, 96, 0.4);
-}
-
-.btn-green:active {
-transform: translateY(6px);
-box-shadow: 0 0px 0 #1a6e3f,
-0 2px 10px rgba(39, 174, 96, 0.3);
-}
-
-.btn-green::after {
-background: linear-gradient(145deg, #229954, #27ae60);
-}
-
-/* Glass 3D Button */
-.btn-glass {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
-color: white;
-border: 1px solid rgba(255, 255, 255, 0.2);
-box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2),
-0 8px 25px rgba(0, 0, 0, 0.15),
-inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.btn-glass:hover {
-transform: translateY(2px);
-background: rgba(255, 255, 255, 0.15);
-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2),
-0 6px 25px rgba(0, 0, 0, 0.2),
-inset 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-
-.btn-glass:active {
-transform: translateY(6px);
-box-shadow: 0 0px 0 rgba(0, 0, 0, 0.2),
-0 2px 15px rgba(0, 0, 0, 0.15),
-inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-/* Advanced 3D Button */
-.btn-3d-advanced {
-background: linear-gradient(145deg, #9b59b6, #8e44ad);
-color: white;
-border: none;
-padding: 20px 40px;
-font-size: 1.2rem;
-border-radius: 12px;
-transform: translateY(-4px);
-box-shadow: 0 8px 0 #6c3483,
-0 12px 30px rgba(155, 89, 182, 0.4),
-inset 0 -4px 0 rgba(0, 0, 0, 0.2);
-transition: all 0.2s ease;
-}
-
-.btn-3d-advanced:hover {
-transform: translateY(-2px);
-box-shadow: 0 6px 0 #6c3483,
-0 10px 30px rgba(155, 89, 182, 0.5),
-inset 0 -4px 0 rgba(0, 0, 0, 0.2);
-}
-
-.btn-3d-advanced:active {
-transform: translateY(2px);
-box-shadow: 0 2px 0 #6c3483,
-0 4px 20px rgba(155, 89, 182, 0.3),
-inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Gradient Purple Button */
-.btn-gradient {
-background: linear-gradient(145deg, #667eea, #764ba2);
-color: white;
-box-shadow: 0 6px 0 #5a6fd8,
-0 8px 20px rgba(102, 126, 234, 0.3);
-position: relative;
-overflow: hidden;
-}
-
-.btn-gradient::before {
-content: '';
-position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-transition: left 0.5s ease;
-}
-
-.btn-gradient:hover::before {
-left: 100%;
-}
-
-.btn-gradient:hover {
-transform: translateY(2px);
-box-shadow: 0 4px 0 #5a6fd8,
-0 6px 20px rgba(102, 126, 234, 0.4);
-}
-
-.btn-gradient:active {
-transform: translateY(6px);
-box-shadow: 0 0px 0 #5a6fd8,
-0 2px 10px rgba(102, 126, 234, 0.3);
-}
-
-/* Responsive Buttons */
-@media (max-width: 768px) {
-.btn {
-padding: 15px 25px;
-font-size: 1rem;
-min-width: 150px;
-}
-
-.btn-3d-advanced {
-padding: 18px 30px;
-font-size: 1.1rem;
-}
-
-.button-grid {
-grid-template-columns: 1fr;
-gap: 1.5rem;
-}
-
-.button-item {
-padding: 1.5rem;
-}
-}
-
-/* ===== WINDOWS XP 3D BUTTONS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
-
-/* Base Windows XP Button Style */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    font-family: 'Tahoma', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    border: 2px solid;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.1s ease;
-    min-width: 120px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Windows XP Classic 3D Effect */
-.btn {
-    /* Light source from top-left */
-    border-top-color: #dfdfdf;
-    border-left-color: #dfdfdf;
-    border-right-color: #808080;
-    border-bottom-color: #808080;
-    background: linear-gradient(to bottom, #f1f1f1 0%, #e5e5e5 100%);
-    color: #000000;
-    text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
-    box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
-}
-
-/* Hover State - Pressed look */
-.btn:hover {
-    border-top-color: #808080;
-    border-left-color: #808080;
-    border-right-color: #dfdfdf;
-    border-bottom-color: #dfdfdf;
-    background: linear-gradient(to bottom, #e5e5e5 0%, #d9d9d9 100%);
-    transform: translate(1px, 1px);
-    box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
-}
-
-/* Active State - Fully pressed */
-.btn:active {
-    border-top-color: #808080;
-    border-left-color: #808080;
-    border-right-color: #dfdfdf;
-    border-bottom-color: #dfdfdf;
-    background: linear-gradient(to bottom, #d9d9d9 0%, #cccccc 100%);
-    transform: translate(2px, 2px);
-    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
-}
-
-/* ===== DIFFERENT XP BUTTON COLORS ===== */
-
-/* Blue XP Button (Default) */
-.btn-primary {
-    background: linear-gradient(to bottom, #7b9aed 0%, #5a78cd 100%);
-    border-top-color: #b5c8f5;
-    border-left-color: #b5c8f5;
-    border-right-color: #3a56a5;
-    border-bottom-color: #3a56a5;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(to bottom, #6a89dc 0%, #4967bb 100%);
-    border-top-color: #3a56a5;
-    border-left-color: #3a56a5;
-    border-right-color: #b5c8f5;
-    border-bottom-color: #b5c8f5;
-}
-
-.btn-primary:active {
-    background: linear-gradient(to bottom, #4967bb 0%, #385599 100%);
-}
-
-/* Green XP Button */
-.btn-green {
-    background: linear-gradient(to bottom, #8cc474 0%, #6ba352 100%);
-    border-top-color: #c4e8b5;
-    border-left-color: #c4e8b5;
-    border-right-color: #4a7d32;
-    border-bottom-color: #4a7d32;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-}
-
-.btn-green:hover {
-    background: linear-gradient(to bottom, #7bb363 0%, #5a9241 100%);
-    border-top-color: #4a7d32;
-    border-left-color: #4a7d32;
-    border-right-color: #c4e8b5;
-    border-bottom-color: #c4e8b5;
-}
-
-.btn-green:active {
-    background: linear-gradient(to bottom, #5a9241 0%, #497d30 100%);
-}
-
-/* Orange XP Button */
-.btn-orange {
-    background: linear-gradient(to bottom, #f6b069 0%, #e5913c 100%);
-    border-top-color: #fad6b5;
-    border-left-color: #fad6b5;
-    border-right-color: #b37126;
-    border-bottom-color: #b37126;
-    color: #000000;
-    text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
-}
-
-.btn-orange:hover {
-    background: linear-gradient(to bottom, #e59f58 0%, #d4802b 100%);
-    border-top-color: #b37126;
-    border-left-color: #b37126;
-    border-right-color: #fad6b5;
-    border-bottom-color: #fad6b5;
-}
-
-.btn-orange:active {
-    background: linear-gradient(to bottom, #d4802b 0%, #c3711a 100%);
-}
-
-/* Red XP Button */
-.btn-red {
-    background: linear-gradient(to bottom, #f28b82 0%, #d9655a 100%);
-    border-top-color: #f9c9c5;
-    border-left-color: #f9c9c5;
-    border-right-color: #b53c32;
-    border-bottom-color: #b53c32;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-}
-
-.btn-red:hover {
-    background: linear-gradient(to bottom, #e17a70 0%, #c85449 100%);
-    border-top-color: #b53c32;
-    border-left-color: #b53c32;
-    border-right-color: #f9c9c5;
-    border-bottom-color: #f9c9c5;
-}
-
-.btn-red:active {
-    background: linear-gradient(to bottom, #c85449 0%, #b74338 100%);
-}
-
-/* Purple XP Button */
-.btn-purple {
-    background: linear-gradient(to bottom, #b8a1e0 0%, #9780c2 100%);
-    border-top-color: #dcd1f5;
-    border-left-color: #dcd1f5;
-    border-right-color: #6b5994;
-    border-bottom-color: #6b5994;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-}
-
-.btn-purple:hover {
-    background: linear-gradient(to bottom, #a790d0 0%, #866fb2 100%);
-    border-top-color: #6b5994;
-    border-left-color: #6b5994;
-    border-right-color: #dcd1f5;
-    border-bottom-color: #dcd1f5;
-}
-
-.btn-purple:active {
-    background: linear-gradient(to bottom, #866fb2 0%, #755ea1 100%);
-}
-
-/* Glass XP Button (Special) */
-.btn-glass {
-    background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.8) 100%);
-    border-top-color: #ffffff;
-    border-left-color: #ffffff;
-    border-right-color: #c0c0c0;
-    border-bottom-color: #c0c0c0;
-    color: #000000;
-    backdrop-filter: blur(5px);
-}
-
-.btn-glass:hover {
-    background: linear-gradient(to bottom, rgba(240,240,240,0.9) 0%, rgba(225,225,225,0.8) 100%);
-    border-top-color: #c0c0c0;
-    border-left-color: #c0c0c0;
-    border-right-color: #ffffff;
-    border-bottom-color: #ffffff;
-}
-
-.btn-glass:active {
-    background: linear-gradient(to bottom, rgba(225,225,225,0.9) 0%, rgba(210,210,210,0.8) 100%);
-}
-
-/* ===== BUTTON SHOWCASE SECTION ===== */
-.button-showcase {
-    padding: 80px 0;
-    background: linear-gradient(to bottom, #008080 0%, #004040 100%);
-    color: #ffffff;
-    text-align: center;
-    font-family: 'Tahoma', sans-serif;
-}
-
-.button-showcase h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-.button-showcase p {
-    font-size: 13px;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-.button-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.button-item {
-    background: linear-gradient(to bottom, #d4d0c8 0%, #c0bcb4 100%);
-    padding: 20px;
-    border: 2px solid;
-    border-top-color: #f0f0f0;
-    border-left-color: #f0f0f0;
-    border-right-color: #808080;
-    border-bottom-color: #808080;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-.button-item h3 {
-    color: #000000;
-    margin-bottom: 15px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.button-item p {
-    margin: 15px 0 0;
-    font-size: 11px;
-    color: #404040;
-}
-
-/* Button Groups */
-.button-group {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 20px 0;
-    flex-wrap: wrap;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .btn {
-        padding: 10px 20px;
-        font-size: 12px;
-        min-width: 100px;
-    }
-    
-    .button-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .button-item {
-        padding: 15px;
-    }
-    
-    .button-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .button-group .btn {
-        width: 200px;
-    }
-}
-
-/* ===== WINDOWS 7 STYLE BUTTONS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
-
-/* Base Windows 7 Button Style */
-.btn {
-    display: inline-block;
-    padding: 8px 16px;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    border: 1px solid;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.2s ease;
-    min-width: 100px;
-    border-radius: 3px;
-    background: linear-gradient(to bottom, #f9f9f9 0%, #f1f1f1 100%);
-}
-
-/* Windows 7 Border Colors */
-.btn {
-    border-top-color: #d0d0d0;
-    border-left-color: #d0d0d0;
-    border-right-color: #d0d0d0;
-    border-bottom-color: #d0d0d0;
-    color: #000000;
-    text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.8) inset,
-                0px 1px 2px rgba(0,0,0,0.1);
-}
-
-/* Hover State */
-.btn:hover {
-    background: linear-gradient(to bottom, #f3f3f3 0%, #e9e9e9 100%);
-    border-color: #a0a0a0;
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.8) inset,
-                0px 1px 3px rgba(0,0,0,0.15);
-}
-
-/* Active State */
-.btn:active,
-.btn:focus {
-    background: linear-gradient(to bottom, #e8e8e8 0%, #dcdcdc 100%);
-    border-color: #9c9c9c;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.1) inset;
-    transform: translateY(1px);
-}
-
-/* ===== WINDOWS 7 BUTTON COLORS ===== */
-
-/* Blue Windows 7 Button (Default) */
-.btn-primary {
-    background: linear-gradient(to bottom, #3b7ac8 0%, #2d5ba3 100%);
-    border-color: #2d5ba3;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 2px rgba(0,0,0,0.2);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(to bottom, #4a89d6 0%, #3b6bb8 100%);
-    border-color: #3b6bb8;
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 3px rgba(0,0,0,0.25);
-}
-
-.btn-primary:active {
-    background: linear-gradient(to bottom, #2d5ba3 0%, #254d8c 100%);
-    border-color: #254d8c;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2) inset;
-}
-
-/* Green Windows 7 Button */
-.btn-green {
-    background: linear-gradient(to bottom, #5cb85c 0%, #449d44 100%);
-    border-color: #449d44;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 2px rgba(0,0,0,0.2);
-}
-
-.btn-green:hover {
-    background: linear-gradient(to bottom, #68c468 0%, #52ad52 100%);
-    border-color: #52ad52;
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 3px rgba(0,0,0,0.25);
-}
-
-.btn-green:active {
-    background: linear-gradient(to bottom, #449d44 0%, #3d8b3d 100%);
-    border-color: #3d8b3d;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2) inset;
-}
-
-/* Orange Windows 7 Button */
-.btn-orange {
-    background: linear-gradient(to bottom, #f0ad4e 0%, #ec971f 100%);
-    border-color: #ec971f;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 2px rgba(0,0,0,0.2);
-}
-
-.btn-orange:hover {
-    background: linear-gradient(to bottom, #f5b861 0%, #f1a42c 100%);
-    border-color: #f1a42c;
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 3px rgba(0,0,0,0.25);
-}
-
-.btn-orange:active {
-    background: linear-gradient(to bottom, #ec971f 0%, #d58512 100%);
-    border-color: #d58512;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2) inset;
-}
-
-/* Red Windows 7 Button */
-.btn-red {
-    background: linear-gradient(to bottom, #d9534f 0%, #c9302c 100%);
-    border-color: #c9302c;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 2px rgba(0,0,0,0.2);
-}
-
-.btn-red:hover {
-    background: linear-gradient(to bottom, #e06561 0%, #d43f3a 100%);
-    border-color: #d43f3a;
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 3px rgba(0,0,0,0.25);
-}
-
-.btn-red:active {
-    background: linear-gradient(to bottom, #c9302c 0%, #ac2925 100%);
-    border-color: #ac2925;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2) inset;
-}
-
-/* Purple Windows 7 Button */
-.btn-purple {
-    background: linear-gradient(to bottom, #7e3bd1 0%, #6a2bb5 100%);
-    border-color: #6a2bb5;
-    color: #ffffff;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 2px rgba(0,0,0,0.2);
-}
-
-.btn-purple:hover {
-    background: linear-gradient(to bottom, #8a47dc 0%, #7637c6 100%);
-    border-color: #7637c6;
-    box-shadow: 0px 1px 0px rgba(255,255,255,0.2) inset,
-                0px 1px 3px rgba(0,0,0,0.25);
-}
-
-.btn-purple:active {
-    background: linear-gradient(to bottom, #6a2bb5 0%, #5c269d 100%);
-    border-color: #5c269d;
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.2) inset;
-}
-
-/* Glass Windows 7 Button */
-.btn-glass {
-    background: linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(245,245,245,0.9) 100%);
-    border-color: #d0d0d0;
-    color: #000000;
-    backdrop-filter: blur(2px);
-}
-
-.btn-glass:hover {
-    background: linear-gradient(to bottom, rgba(250,250,250,0.95) 0%, rgba(240,240,240,0.9) 100%);
-    border-color: #b0b0b0;
-}
-
-.btn-glass:active {
-    background: linear-gradient(to bottom, rgba(240,240,240,0.95) 0%, rgba(230,230,230,0.9) 100%);
-    border-color: #a0a0a0;
-}
-
-/* Button Groups */
-.button-group {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin: 20px 0;
-    flex-wrap: wrap;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .btn {
-        padding: 6px 12px;
-        font-size: 11px;
-        min-width: 80px;
-    }
-    
-    .button-group {
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-    }
-    
-    .button-group .btn {
-        width: 180px;
-    }
-}
-
 /* ===== macOS STYLE BUTTONS ===== */
 @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap');
 
@@ -1291,40 +213,171 @@ padding: 1.5rem;
     flex-wrap: wrap;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .btn {
-        padding: 7px 16px;
-        font-size: 12px;
-        min-width: 90px;
-        border-radius: 5px;
-    }
-    
-    .button-group {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .button-group .btn {
-        width: 200px;
-    }
+/* ===== CONSISTENT SECTION BACKGROUNDS ===== */
+.services, .projects, .contact {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ffffff;
+    scroll-margin-top: 100px;
 }
 
-/* macOS Style Focus Ring */
-*:focus {
+.services h2, .projects h2, .contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Services Section Specific Styles */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #ecf0f1;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Projects Section Specific Styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.project-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.project-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #ecf0f1;
+    opacity: 0.9;
+}
+
+/* Contact Section Styles */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ecf0f1;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #bdc3c7;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
     outline: none;
-}
-
-.btn:focus-visible {
-    box-shadow: 0px 0px 0px 3px rgba(0, 125, 250, 0.4),
-                0px 1px 2px rgba(0, 0, 0, 0.05) !important;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
 }
 
 /* About Section Styles */
 .about {
-    padding: 80px 0;
+    padding: 100px 0;
     background: #f8f9fa;
+    scroll-margin-top: 100px;
 }
 
 .about h2 {
@@ -1398,6 +451,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    height: 80px;
 }
 
 header .container {
@@ -1405,6 +459,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 20px;
+    height: 100%;
 }
 
 .logo h2 {
@@ -1436,7 +491,7 @@ nav a:hover {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 150px 20px 100px;
+    padding: 180px 20px 120px;
     margin-top: 80px;
 }
 
@@ -1451,17 +506,90 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* Button Groups */
-.button-group {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin: 24px 0;
-    flex-wrap: wrap;
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
 }
 
-/* Responsive Design for Button Group */
+/* ===== SPACING AND SCROLL FIXES ===== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Section Spacers */
+.section-spacer {
+    height: 80px;
+    background: linear-gradient(to bottom, 
+        transparent, 
+        rgba(44, 62, 80, 0.1) 50%, 
+        transparent
+    );
+}
+
+/* For the About section spacer */
+#about + .section-spacer {
+    background: linear-gradient(to bottom, 
+        transparent,
+        rgba(248, 249, 250, 0.5) 50%,
+        rgba(44, 62, 80, 0.1) 100%
+    );
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Title Divider */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.about .section-title h2 {
+    color: #2c3e50;
+}
+
+.about .section-title::after {
+    background: #3498db;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    .btn {
+        padding: 7px 16px;
+        font-size: 12px;
+        min-width: 90px;
+        border-radius: 5px;
+    }
+    
     .button-group {
         flex-direction: column;
         align-items: center;
@@ -1471,27 +599,42 @@ nav a:hover {
     .button-group .btn {
         width: 220px;
     }
-}
-
-@media (max-width: 480px) {
-    .button-group .btn {
-        width: 100%;
-        max-width: 280px;
+    
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+    
+    .service-card,
+    .project-card {
+        padding: 2rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
     .about-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .services, .projects, .contact, .about {
+        padding: 80px 0;
+    }
+    
+    .services h2, 
+    .projects h2, 
+    .contact h2,
+    .about h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero {
+        padding: 150px 20px 80px;
     }
     
     .hero h1 {
@@ -1500,6 +643,40 @@ footer {
     
     nav ul {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .section-spacer {
+        height: 60px;
     }
 }
 
+@media (max-width: 480px) {
+    .button-group .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .hero {
+        padding: 120px 20px 60px;
+    }
+    
+    .services, .projects, .contact, .about {
+        padding: 60px 0;
+    }
+    
+    .section-spacer {
+        height: 40px;
+    }
+}
+
+/* macOS Style Focus Ring */
+*:focus {
+    outline: none;
+}
+
+.btn:focus-visible {
+    box-shadow: 0px 0px 0px 3px rgba(0, 125, 250, 0.4),
+                0px 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
